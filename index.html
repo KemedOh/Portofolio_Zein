@@ -481,29 +481,95 @@
                     </div>
                 </div>
 
-                <!-- Catia V520 -->
-                <div class="fade-in hover-card">
+                <!-- MS Office -->
+                <div class="fade-in hover-card" id="officeCard">
                     <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 h-full">
                         <div class="p-6">
+                            <!-- Header dengan Microsoft Logo -->
                             <div class="flex items-center mb-4">
                                 <div class="w-12 h-12 bg-[#00539F]/10 rounded-lg flex items-center justify-center mr-4">
-                                    <i class="fas fa-jet-fighter text-[#00539F] text-xl"></i>
+                                    <i class="fab fa-microsoft text-[#00539F] text-xl"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800">Catia V520</h3>
-                                    <p class="text-gray-600 text-sm">Advanced CAD</p>
+                                    <h3 class="text-xl font-bold text-gray-800">Microsoft Office </h3>
+                                    <p class="text-gray-600 text-sm">Productivity Suite</p>
                                 </div>
                             </div>
+
+                            <!-- Dropdown di dalam card -->
                             <div class="mb-4">
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm font-medium text-gray-700">Skill Level</span>
-                                    <span class="text-sm font-bold text-[#00539F]">40%</span>
+                                <label for="skillSelector" class="block text-sm font-medium text-gray-700 mb-1">
+                                    Pilih Skill:
+                                </label>
+                                <select id="skillSelector"
+                                    class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00539F] bg-white">
+
+                                    <option value="word">📝 Microsoft Word</option>
+                                    <option value="excel">📊 Microsoft Excel</option>
+                                    <option value="powerpoint">📽️ Microsoft PowerPoint</option>
+                                </select>
+                            </div>
+
+                            <!-- Divider tipis -->
+                            <div class="border-t border-gray-200 my-4"></div>
+
+                            <!-- Container untuk skill items -->
+                            <div id="skillsContainer">
+                                <!-- Microsoft Word -->
+                                <div class="mb-4 skill-item" data-skill="word">
+                                    <div class="flex items-center mb-2">
+                                        <i class="fas fa-file-word text-[#185ABD] mr-2"></i>
+                                        <span class="text-sm font-semibold text-gray-700">Microsoft Word</span>
+                                    </div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-xs text-gray-600">Proficiency</span>
+                                        <span class="text-xs font-bold text-[#185ABD]">85%</span>
+                                    </div>
+                                    <div class="skill-bar mb-2">
+                                        <div class="skill-progress" style="width: 85%; background: #185ABD;"></div>
+                                    </div>
+                                    <p class="text-gray-600 text-xs">Dokumen profesional, mail merge, dan template
+                                        canggih</p>
                                 </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 40%"></div>
+
+                                <!-- Microsoft Excel -->
+                                <div class="mb-4 skill-item" data-skill="excel">
+                                    <div class="flex items-center mb-2">
+                                        <i class="fas fa-file-excel text-[#107C41] mr-2"></i>
+                                        <span class="text-sm font-semibold text-gray-700">Microsoft Excel</span>
+                                    </div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-xs text-gray-600">Proficiency</span>
+                                        <span class="text-xs font-bold text-[#107C41]">70%</span>
+                                    </div>
+                                    <div class="skill-bar mb-2">
+                                        <div class="skill-progress" style="width: 70%; background: #107C41;"></div>
+                                    </div>
+                                    <p class="text-gray-600 text-xs">PivotTable, VLOOKUP, dan analisis data kompleks</p>
+                                </div>
+
+                                <!-- Microsoft PowerPoint -->
+                                <div class="mb-2 skill-item" data-skill="powerpoint">
+                                    <div class="flex items-center mb-2">
+                                        <i class="fas fa-file-powerpoint text-[#C43E1C] mr-2"></i>
+                                        <span class="text-sm font-semibold text-gray-700">Microsoft PowerPoint</span>
+                                    </div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-xs text-gray-600">Proficiency</span>
+                                        <span class="text-xs font-bold text-[#C43E1C]">90%</span>
+                                    </div>
+                                    <div class="skill-bar mb-2">
+                                        <div class="skill-progress" style="width: 90%; background: #C43E1C;"></div>
+                                    </div>
+                                    <p class="text-gray-600 text-xs">Animasi kustom, master slide, dan presentasi
+                                        interaktif</p>
                                 </div>
                             </div>
-                            <p class="text-gray-700 text-sm">Desain permukaan kompleks dan pemodelan lanjutan</p>
+
+                            <!-- Info ringan (opsional) -->
+                            <div class="mt-4 pt-3 text-xs text-gray-400 border-t border-gray-100">
+                                <i class="fas fa-info-circle mr-1"></i> Gunakan dropdown untuk memfilter skill
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -697,32 +763,45 @@
                 <div class="fade-in hover-card">
                     <div
                         class="bg-white rounded-xl shadow-md overflow-hidden h-full flex flex-col hover:shadow-lg transition-shadow duration-300">
+
                         <!-- Certificate Image -->
                         <div class="h-48 bg-white flex items-center justify-center p-4 border-b">
-                            <img src="assets/img/PKKMB_page-0001.jpg" alt="PKKMB Certificate"
+                            <img src="assets/img/PW-WBR-071022026 Muhammad Zein Aulia_page-0001.jpg"
+                                alt="Mini Class PLC Mitsubishi FX2N Certificate"
                                 class="h-full w-full object-contain rounded-md">
                         </div>
 
                         <!-- Certificate Info -->
                         <div class="p-5 flex-grow">
-                            <h3 class="text-lg font-bold mb-2 text-gray-800">PKKMB (Pengenalan Kehidupan Kampus)</h3>
-                            <p class="text-gray-600 mb-3 text-sm">Orientasi Mahasiswa Baru</p>
-                            <p class="text-gray-700 mb-4 text-sm">Program pengenalan kehidupan kampus untuk mahasiswa
-                                baru
-                                dalam rangka adaptasi lingkungan akademik.</p>
+                            <h3 class="text-lg font-bold mb-2 text-gray-800">
+                                Mini Class PLC Mitsubishi FX2N
+                            </h3>
+
+                            <p class="text-gray-600 mb-3 text-sm">
+                                Industrial Automation Training
+                            </p>
+
+                            <p class="text-gray-700 mb-4 text-sm">
+                                Pelatihan dasar pemrograman dan pengoperasian PLC Mitsubishi FX2N
+                                untuk sistem kontrol dan otomasi industri.
+                                Fokus pada ladder diagram, input-output configuration,
+                                serta implementasi pada sistem kontrol sederhana.
+                            </p>
+
                             <div class="flex items-center text-gray-600 text-sm">
                                 <i class="fas fa-calendar-alt mr-2"></i>
-                                <span>2021</span>
+                                <span>2026</span>
                             </div>
                         </div>
 
                         <!-- Action Buttons -->
                         <div class="px-5 pb-5 grid grid-cols-2 gap-2">
-                            <button onclick="openCertificateModal('assets/img/PKKMB_page-0001.jpg')"
+                            <button
+                                onclick="openCertificateModal('assets/img/PW-WBR-071022026 Muhammad Zein Aulia_page-0001.jpg')"
                                 class="bg-[#00539F] hover:bg-[#004080] text-white font-medium py-2 rounded-lg transition-colors duration-300 text-sm">
                                 <i class="fas fa-expand mr-1"></i> Perbesar
                             </button>
-                            <a href="assets/img/PKKMB.pdf" target="_blank"
+                            <a href="assets/img/PW-WBR-071022026 Muhammad Zein Aulia.pdf" target="_blank"
                                 class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 rounded-lg transition-colors duration-300 text-sm text-center">
                                 <i class="fas fa-download mr-1"></i> PDF
                             </a>
@@ -816,7 +895,7 @@
                             <h3 class="text-lg font-bold mb-2 text-gray-800">Gorolong Box</h3>
                             <p class="text-gray-700 mb-3 text-sm">Merancang dan membuat mobil tanpa mesin untuk
                                 perlombaan
-                                kereta peti sabut</p>
+                                kereta peti sabun</p>
                             <div class="flex items-center text-gray-600">
                                 <i class="fas fa-calendar-alt mr-2 text-xs"></i>
                                 <span class="text-xs">Proyek Kompetisi 2024</span>
@@ -1128,10 +1207,49 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Project 13: Design and Prototyping Automatic Water Pump -->
+                <div class="fade-in hover-card">
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden h-full flex flex-col">
+                        <!-- Project Image -->
+                        <div class="h-48 bg-white flex items-center justify-center p-4">
+                            <img src="assets/img/WhatsApp Image 2026-03-01 at 21.43.00.jpeg"
+                                alt="Automatic Water Pump System" class="w-full h-full object-contain rounded-lg">
+                        </div>
+
+                        <!-- Project Info -->
+                        <div class="p-5 flex-grow">
+                            <!-- Title -->
+                            <h3 class="text-lg font-bold mb-2 text-gray-800">Design and Prototyping Automatic Water Pump
+                            </h3>
+
+                            <!-- Description -->
+                            <p class="text-gray-700 mb-3 text-sm">
+                                Perancangan dan pembuatan prototipe pompa air otomatis dengan kontrol level ketinggian
+                                air menggunakan
+                                sensor ultrasonik, relay, dan mikrokontroler untuk efisiensi penggunaan air.
+                            </p>
+
+                            <!-- Project Meta -->
+                            <div class="flex items-center text-gray-600 mb-2">
+                                <i class="fas fa-calendar-alt mr-2 text-xs text-[#00539F]"></i>
+                                <span class="text-xs">Proyek IoT & Otomasi 2026</span>
+                            </div>
+                        </div>
+
+                        <!-- Action Button -->
+                        <div class="px-5 pb-5">
+                            <a href="#" target="_blank"
+                                class="block w-full bg-[#00539F] hover:bg-[#004080] text-white font-medium py-2 rounded-lg transition-colors duration-300 text-sm text-center">
+                                <i class="fas fa-eye mr-2"></i> Lihat Detail Proyek
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="text-center mt-12 fade-in">
-                <p class="text-gray-600">Total <span class="font-bold text-[#00539F]">12 Proyek</span> telah berhasil
+                <p class="text-gray-600">Total <span class="font-bold text-[#00539F]">13 Proyek</span> telah berhasil
                     diselesaikan</p>
             </div>
         </div>
@@ -1670,6 +1788,42 @@
             }, { threshold: 0.5 });
 
             skillBars.forEach(bar => skillObserver.observe(bar));
+        });
+
+
+        document.getElementById('skillSelector').addEventListener('change', function () {
+            const selectedSkill = this.value;
+            const skillItems = document.querySelectorAll('.skill-item');
+
+            skillItems.forEach(item => {
+                if (selectedSkill === 'all') {
+                    item.style.display = 'block';
+                    // Animasi subtle
+                    item.style.opacity = '0';
+                    setTimeout(() => { item.style.opacity = '1'; }, 50);
+                } else {
+                    if (item.dataset.skill === selectedSkill) {
+                        item.style.display = 'block';
+                        item.style.opacity = '0';
+                        setTimeout(() => { item.style.opacity = '1'; }, 50);
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+
+            // Optional: Update label atau tampilkan pesan
+            const select = document.getElementById('skillSelector');
+            const selectedOption = select.options[select.selectedIndex].text;
+            console.log(`Menampilkan: ${selectedOption}`);
+        });
+
+        // Trigger change event on page load to ensure correct display
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set default to 'all'
+            document.getElementById('skillSelector').value = 'word';
+            // Trigger change event
+            document.getElementById('skillSelector').dispatchEvent(new Event('change'));
         });
     </script>
 </body>
